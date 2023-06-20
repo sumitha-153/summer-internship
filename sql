@@ -45,3 +45,80 @@ mysql> select count(dep) from summerintern;
 mysql> select max(dep) from summerintern;
 
 mysql> select min(dep) from summerintern;
+
+mysql> select * from summerintern;
++------+-----------+------------+------------+------------+------+------------+
+| id   | name      | course1    | course2    | course3    | dep  | department |
++------+-----------+------------+------------+------------+------+------------+
+|    1 | Anushya   | javascript | Express.js | NOde.js    |  104 | CSE        |
+|    2 | Anu       | javascript | MongoDB    | Angular.js |  105 | ECE        |
+|    3 | Arun      | java       | CSS        | HTML       |  106 | EEE        |
+|    4 | Babu      | javascript | C++        | C          |  107 | MECH       |
+|    5 | saravanan | Ruby       | C          | PHP        |  108 | CIVIL      |
+|    6 | Sumitha   | R          | Angular.js | MySQL      |  109 | IT         |
+|    7 | Swetha    | Python     | Javascript | Oracle     |  110 | AIDS       |
++------+-----------+------------+------------+------------+------+------------+
+7 rows in set (0.01 sec)
+
+mysql> create table marks (id int,totalmark int,avg int);
+
+mysql> insert into summerintern values(1,300,100);
+
+mysql> insert into marks values(1,300,100);
+
+mysql> insert into marks values(2,200,75);
+
+mysql> insert into marks values(3,190,70);
+
+mysql> insert into marks values(4,150,50);
+
+mysql> select * from marks;
+mysql> select summerintern.name ,summerintern.course1,summerintern.course2,summerintern.course3,marks.totalmark,marks.avg from summerint
+ern inner join marks on summerintern.id=marks.id;
++---------+------------+------------+------------+-----------+------+
+| name    | course1    | course2    | course3    | totalmark | avg  |
++---------+------------+------------+------------+-----------+------+
+| Anushya | javascript | Express.js | NOde.js    |       300 |  100 |
+| Anu     | javascript | MongoDB    | Angular.js |       200 |   75 |
+| Arun    | java       | CSS        | HTML       |       190 |   70 |
+| Babu    | javascript | C++        | C          |       150 |   50 |
++---------+------------+------------+------------+-----------+------+
+4 rows in set (0.04 sec)
+
+mysql> select * from summerintern left join marks on summerintern.id=marks.id;
++------+-----------+------------+------------+------------+------+------------+------+-----------+------+
+| id   | name      | course1    | course2    | course3    | dep  | department | id   | totalmark | avg  |
++------+-----------+------------+------------+------------+------+------------+------+-----------+------+
+|    1 | Anushya   | javascript | Express.js | NOde.js    |  104 | CSE        |    1 |       300 |  100 |
+|    2 | Anu       | javascript | MongoDB    | Angular.js |  105 | ECE        |    2 |       200 |   75 |
+|    3 | Arun      | java       | CSS        | HTML       |  106 | EEE        |    3 |       190 |   70 |
+|    4 | Babu      | javascript | C++        | C          |  107 | MECH       |    4 |       150 |   50 |
+|    5 | saravanan | Ruby       | C          | PHP        |  108 | CIVIL      | NULL |      NULL | NULL |
+|    6 | Sumitha   | R          | Angular.js | MySQL      |  109 | IT         | NULL |      NULL | NULL |
+|    7 | Swetha    | Python     | Javascript | Oracle     |  110 | AIDS       | NULL |      NULL | NULL |
++------+-----------+------------+------------+------------+------+------------+------+-----------+------+
+7 rows in set (0.00 sec)
+
+mysql> select * from summerintern right join marks on summerintern.id=marks.id;
++------+---------+------------+------------+------------+------+------------+------+-----------+------+
+| id   | name    | course1    | course2    | course3    | dep  | department | id   | totalmark | avg  |
++------+---------+------------+------------+------------+------+------------+------+-----------+------+
+|    1 | Anushya | javascript | Express.js | NOde.js    |  104 | CSE        |    1 |       300 |  100 |
+|    2 | Anu     | javascript | MongoDB    | Angular.js |  105 | ECE        |    2 |       200 |   75 |
+|    3 | Arun    | java       | CSS        | HTML       |  106 | EEE        |    3 |       190 |   70 |
+|    4 | Babu    | javascript | C++        | C          |  107 | MECH       |    4 |       150 |   50 |
++------+---------+------------+------------+------------+------+------------+------+-----------+------+
+4 rows in set (0.00 sec)
+
+mysql> select * from summerintern inner join marks on summerintern.id=marks.id;
++------+---------+------------+------------+------------+------+------------+------+-----------+------+
+| id   | name    | course1    | course2    | course3    | dep  | department | id   | totalmark | avg  |
++------+---------+------------+------------+------------+------+------------+------+-----------+------+
+|    1 | Anushya | javascript | Express.js | NOde.js    |  104 | CSE        |    1 |       300 |  100 |
+|    2 | Anu     | javascript | MongoDB    | Angular.js |  105 | ECE        |    2 |       200 |   75 |
+|    3 | Arun    | java       | CSS        | HTML       |  106 | EEE        |    3 |       190 |   70 |
+|    4 | Babu    | javascript | C++        | C          |  107 | MECH       |    4 |       150 |   50 |
++------+---------+------------+------------+------------+------+------------+------+-----------+------+
+4 rows in set (0.00 sec)
+
+mysql> select * from summerintern inner join marks on summerintern.id != marks.id;
