@@ -1,0 +1,112 @@
+use new
+switched to db new
+
+db.bike.insert([{name:"Himalaiyan",mileage:40,type:"Fuel"},{name:"RX100",mileage:60,type:"Fuel"},{name:"Hero",mileage:50,type:"Electricity"},{name:"Honda",milegae:55,type:"diseal"}])
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6491b776027336a62037d004"),
+    '1': ObjectId("6491b776027336a62037d005"),
+    '2': ObjectId("6491b776027336a62037d006"),
+    '3': ObjectId("6491b776027336a62037d007")
+  }
+}
+db.bike.find()
+{
+  _id: ObjectId("6491b776027336a62037d004"),
+  name: 'Himalaiyan',
+  mileage: 40,
+  type: 'Fuel'
+}
+{
+  _id: ObjectId("6491b776027336a62037d005"),
+  name: 'RX100',
+  mileage: 60,
+  type: 'Fuel'
+}
+{
+  _id: ObjectId("6491b776027336a62037d006"),
+  name: 'Hero',
+  mileage: 50,
+  type: 'Electricity'
+}
+{
+  _id: ObjectId("6491b776027336a62037d007"),
+  name: 'Honda',
+  milegae: 55,
+  type: 'diseal'
+}
+db.bike.insert([{name:"TVS",mileage:50,type:"Petrol"},{name:"Yamaha",mileage:60,type:"Electricity"},{name:"CD100",mileage:90,type:"Petrol"},{name:"Discover",milegae:59,type:"Petrol"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6491b816027336a62037d008"),
+    '1': ObjectId("6491b816027336a62037d009"),
+    '2': ObjectId("6491b816027336a62037d00a"),
+    '3': ObjectId("6491b816027336a62037d00b")
+  }
+}
+db.bike.find()
+{
+  _id: ObjectId("6491b776027336a62037d004"),
+  name: 'Himalaiyan',
+  mileage: 40,
+  type: 'Fuel'
+}
+{
+  _id: ObjectId("6491b776027336a62037d005"),
+  name: 'RX100',
+  mileage: 60,
+  type: 'Fuel'
+}
+db.bike.find({name:"CD100"})
+{
+  _id: ObjectId("6491b816027336a62037d00a"),
+  name: 'CD100',
+  mileage: 90,
+  type: 'Petrol'
+}
+db.bike.find().sort({mileage:-1})
+{
+  _id: ObjectId("6491b816027336a62037d00a"),
+  name: 'CD100',
+  mileage: 90,
+  type: 'Petrol'
+}
+{
+  _id: ObjectId("6491b776027336a62037d005"),
+  name: 'RX100',
+  mileage: 60,
+  type: 'Fuel'
+}
+{
+  _id: ObjectId("6491b816027336a62037d009"),
+  name: 'Yamaha',
+  mileage: 60,
+  type: 'Electricity'
+}
+{
+  _id: ObjectId("6491b776027336a62037d006"),
+  name: 'Hero',
+  mileage: 50,
+  type: 'Electricity'
+}
+{
+  _id: ObjectId("6491b816027336a62037d008"),
+  name: 'TVS',
+  mileage: 50,
+  type: 'Petrol'
+}
+{
+  _id: ObjectId("6491b776027336a62037d004"),
+  name: 'Himalaiyan',
+  mileage: 40,
+  type: 'Fuel'
+}
+{
+  _id: ObjectId("6491b776027336a62037d007"),
+  name: 'Honda',
+  milegae: 55,
+  type: 'diseal'
+}
