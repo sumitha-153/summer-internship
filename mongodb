@@ -7,6 +7,7 @@ DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany
   acknowledged: true,
   insertedIds: {
     '0': ObjectId("6491b776027336a62037d004"),
+    
     '1': ObjectId("6491b776027336a62037d005"),
     '2': ObjectId("6491b776027336a62037d006"),
     '3': ObjectId("6491b776027336a62037d007")
