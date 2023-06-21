@@ -122,3 +122,4 @@ mysql> select * from summerintern inner join marks on summerintern.id=marks.id;
 4 rows in set (0.00 sec)
 
 mysql> select * from summerintern inner join marks on summerintern.id != marks.id;
+
