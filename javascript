@@ -1,5 +1,6 @@
 ----------->DAY-1<-----------------
 let a="10"/0
+
 console.log(a)
 let num1=10
 let num2=50
