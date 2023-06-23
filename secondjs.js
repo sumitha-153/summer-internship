@@ -1,4 +1,5 @@
 //----------------------->DAY-2<------------------------//
+
 console.log("Happy morning");
 
 //-------->Palindrome Program:
