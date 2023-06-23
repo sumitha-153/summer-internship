@@ -4,6 +4,7 @@ mysql> insert into summerintern values(1,"Anushya","javascript","Express.js","NO
 
 mysql> insert into summerintern values(2,"Anu","javascript","MongoDB","Angular.js",105);
 
+
 mysql> insert into summerintern values(3,"Arun","java","CSS","HTML",106);
 
 mysql> insert into summerintern values(4,"Babu","javascript","C++","C",107);
