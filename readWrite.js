@@ -1,7 +1,7 @@
 const fs= require('fs')
 fs.readFile(`${__dirname}/states.txt`,(err,data)=>{
     if(err)
-    console.log("Nakku");
+    console.log("Error");
     else
     console.log(data.toString());
     const inputdata= "Sing your fav song"
